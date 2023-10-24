@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Pokedex Title -->
+    <TextView
+        android:id="@+id/pokedexTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Pokedex"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Pokemon Image -->
+    <ImageView
+        android:id="@+id/pokemonImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pokedexTitle" />
+
+    <!-- Pokemon Number -->
+
+    <TextView
+        android:id="@+id/pokemonNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Pokemon #1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pokemonImage" />
+
+    <!-- Pokemon Name -->
+    <TextView
+        android:id="@+id/pokemonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Bulbasaur"
+        app:layout_constraintStart_toEndOf="@id/pokemonNumber"
+        app:layout_constraintTop_toBottomOf="@id/pokemonImage" />
+
+    <!-- Pokemon Weight -->
+    <TextView
+        android:id="@+id/pokemonWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Weight: 69 lbs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pokemonNumber" />
+
+    <!-- Types -->
+    <TextView
+        android:id="@+id/pokemonTypes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Grass, Poison"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pokemonNumber" />
+
+    <!-- Abilities -->
+    <TextView
+        android:id="@+id/pokemonAbilities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Overgrow, Chlorophyll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pokemonTypes" />
+
+    <!-- Moves -->
+    <TextView
+        android:id="@+id/pokemonMoves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Tackle, Growl, Vine Whip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pokemonAbilities" />
+
+    <!-- Sprites -->
+    <ImageView
+        android:id="@+id/pokemonSprites"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pokemonMoves" />
+</androidx.constraintlayout.widget.ConstraintLayout>
