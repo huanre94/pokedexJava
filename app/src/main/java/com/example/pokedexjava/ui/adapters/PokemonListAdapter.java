@@ -80,7 +80,6 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
                 })
                 .into(holder.pokemonImage);
 
-        //add click listener here to cardview and show a toast with name
         holder.cardView.setOnClickListener(v -> {
             int pokemonId = pokemonList.get(position).getNumber();
 

@@ -13,14 +13,26 @@
         android:padding="8dp"
         tools:listitem="@layout/pokemon_list_item" />
 
-<!--    <ProgressBar-->
-<!--        android:id="@+id/item_progress_bar"-->
-<!--        android:layout_width="30dp"-->
-<!--        android:layout_height="30dp"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:elevation="5dp"-->
-<!--        android:padding="5dp"-->
-<!--        android:visibility="gone" />-->
+    <ProgressBar
+        android:id="@+id/item_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
 
+    <!-- Handle disconnect error with a text and a button -->
+    <Button
+        android:id="@+id/item_error_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Retry"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/item_error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Error"
+        android:visibility="gone" />
 </RelativeLayout>

@@ -6,6 +6,10 @@ public class Pokemon {
     private int id;
     private String name;
 
+    public ArrayList<Ability> getAbilities() {
+        return abilities;
+    }
+
     public String getName() {
         return name;
     }
@@ -14,8 +18,11 @@ public class Pokemon {
         this.name = name;
     }
 
-    private Ability abilities;
+    private ArrayList<Ability> abilities;
 
+    public void setAbilities(ArrayList<Ability> abilities) {
+        this.abilities = abilities;
+    }
 
     public int getId() {
         return id;
@@ -62,7 +69,7 @@ public class Pokemon {
     private ArrayList<Types> types;
     private Sprites sprites;
 
-    private class Moves {
+    public class Moves {
         private Move move;
 
         public Move getMove() {
@@ -73,7 +80,7 @@ public class Pokemon {
             this.move = move;
         }
 
-        private class Move {
+        public class Move {
             private String name;
             private String url;
 
@@ -95,7 +102,7 @@ public class Pokemon {
         }
     }
 
-    private class Types {
+    public class Types {
         private Type type;
 
         public Type getType() {
@@ -106,7 +113,7 @@ public class Pokemon {
             this.type = type;
         }
 
-        private class Type {
+        public class Type {
             private String name;
             private String url;
 
@@ -120,7 +127,7 @@ public class Pokemon {
         }
     }
 
-    private class Sprites {
+    public class Sprites {
         private String front_default;
         private String back_default;
 
@@ -141,9 +148,6 @@ public class Pokemon {
         }
     }
 
-    public Ability getAbilities() {
-        return abilities;
-    }
 
     private String imageUrl;
 
@@ -155,28 +159,55 @@ public class Pokemon {
         this.imageUrl = imageUrl;
     }
 
-    public void setAbilities(Ability abilities) {
-        this.abilities = abilities;
-    }
 
-    private class Ability {
-        private String name;
-        private String url;
+    public class Ability {
+        private boolean is_hidden;
+        private int slot;
+        private Item ability;
 
-        public String getName() {
-            return name;
+        public boolean isIs_hidden() {
+            return is_hidden;
         }
 
-        public void setName(String name) {
-            this.name = name;
+        public void setIs_hidden(boolean is_hidden) {
+            this.is_hidden = is_hidden;
         }
 
-        public String getUrl() {
-            return url;
+        public int getSlot() {
+            return slot;
         }
 
-        public void setUrl(String url) {
-            this.url = url;
+        public void setSlot(int slot) {
+            this.slot = slot;
+        }
+
+        public Item getAbility() {
+            return ability;
+        }
+
+        public void setAbility(Item ability) {
+            this.ability = ability;
+        }
+
+        public class Item {
+            private String name;
+            private String url;
+
+            public String getName() {
+                return name;
+            }
+
+            public void setName(String name) {
+                this.name = name;
+            }
+
+            public String getUrl() {
+                return url;
+            }
+
+            public void setUrl(String url) {
+                this.url = url;
+            }
         }
     }
 }

@@ -9,7 +9,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class PokemonRepository implements PokeapiService {
-    private PokeapiService pokeapiService;
+    private final PokeapiService pokeapiService;
 
     public PokemonRepository() {
         Retrofit retrofit = new Retrofit.Builder()
@@ -26,6 +26,7 @@ public class PokemonRepository implements PokeapiService {
 
     @Override
     public Call<Pokemon> getPokemonDetail(int id) {
+
         return pokeapiService.getPokemonDetail(id);
     }
 }
